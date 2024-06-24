@@ -1,0 +1,33 @@
+{
+  "name": "dxos-bundle",
+  "version": "0.0.1",
+  "description": "a DXOS bundle that can be used in no-build environments",
+  "keywords": [
+    "dxos",
+    "crdt"
+  ],
+  "author": "Andreas Rozek <a.rozek@gmx.de> (https://www.rozek.de/)",
+  "license": "MIT",
+  "homepage": "https://github.com/rozek/dxos-bundle#readme",
+  "bugs": {
+    "url": "https://github.com/rozek/dxos-bundle/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && tsc && vite build --sourcemap true --assetsDir . && rm ./dist/index.html && mv ./dist/index.js ./dist/dxos-bundle.js && mv ./dist/index.js.map ./dist/dxos-bundle.js.map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rozek/dxos-bundle.git"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "vite-plugin-top-level-await": "^1.4.1",
+    "vite-plugin-wasm": "^3.3.0"
+  }
+}
