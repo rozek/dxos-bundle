@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script type="module" src="/src/dxos-bundle.ts"></script>
+    
+    <script>
+      if (window.dxos == null) {
+      	document.addEventListener(
+      	  'dxos',(Event) => console.log('"dxos" has become available',window.dxos)
+      	)
+      }
+    
+      function waitForDXOS () {
+      	if (window.dxos == null) {
+      		console.log('waiting for "dxos"')
+      		setTimeout(waitForDXOS,100)
+      	} else {
+      		console.log('"dxos" has become available',window.dxos)
+      	}
+      }
+      waitForDXOS()
+    </script>
+  </body>
+</html>
