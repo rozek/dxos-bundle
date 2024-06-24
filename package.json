@@ -27,6 +27,8 @@
     "vite": "^5.1.6"
   },
   "dependencies": {
+    "@dxos/client": "^0.5.8",
+    "@dxos/shell": "^0.5.8",
     "vite-plugin-top-level-await": "^1.4.1",
     "vite-plugin-wasm": "^3.3.0"
   }
